@@ -8,6 +8,6 @@ public class HealthController {
 
     @GetMapping("/health")
     public String health() {
-        return "MRE Wallet Engine is running";
+        return "Wallet Engine is UP";
     }
 }
