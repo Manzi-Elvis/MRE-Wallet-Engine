@@ -1,10 +1,9 @@
-package com.mre.walletengine;
+package com.mre.wallet_engine;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
-import org.springframework.boot.autoconfigure.jdbc.DataSourceAutoConfiguration;
 
-@SpringBootApplication(exclude = { DataSourceAutoConfiguration.class })
+@SpringBootApplication
 public class MreWalletEngineApplication {
 
     public static void main(String[] args) {
