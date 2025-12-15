@@ -1,4 +1,4 @@
-package com.mre.walletengine;
+package com.mre.wallet_engine;
 
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RestController;
