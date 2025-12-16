@@ -1,7 +1,7 @@
 package com.mre.wallet_engine.model;
 
 import jakarta.persistence.*;
-import java.util.List;
+// import java.util.List;
 
 @Entity
 @Table(name = "users")
