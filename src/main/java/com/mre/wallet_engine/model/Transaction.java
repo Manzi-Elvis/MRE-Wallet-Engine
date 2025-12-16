@@ -25,5 +25,20 @@ public class Transaction {
     @Column(nullable = false)
     private LocalDateTime createdAt = LocalDateTime.now();
 
+    public void setWallet(Wallet wallet2) {
+      // TODO Auto-generated method stub
+      throw new UnsupportedOperationException("Unimplemented method 'setWallet'");
+    }
+
+    public void setAmount(BigDecimal amount2) {
+      // TODO Auto-generated method stub
+      throw new UnsupportedOperationException("Unimplemented method 'setAmount'");
+    }
+
+    public void setType(String string) {
+      // TODO Auto-generated method stub
+      throw new UnsupportedOperationException("Unimplemented method 'setType'");
+    }
+
     // Constructors, getters, setters
 }
