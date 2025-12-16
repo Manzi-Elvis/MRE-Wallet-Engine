@@ -2,7 +2,7 @@ package com.mre.wallet_engine.model;
 
 import jakarta.persistence.*;
 import java.math.BigDecimal;
-import java.time.LocalDateTime;
+import java.time.Instant;
 
 @Entity
 @Table(name = "transactions")
@@ -12,8 +12,7 @@ public class Transaction {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
-    @ManyToOne
-    @JoinColumn(name = "wallet_id")
+    @ManyToOne(optional = false)
     private Wallet wallet;
 
     @Column(nullable = false)
@@ -22,23 +21,31 @@ public class Transaction {
     @Column(nullable = false)
     private String type; // CREDIT or DEBIT
 
-    @Column(nullable = false)
-    private LocalDateTime createdAt = LocalDateTime.now();
+    private Instant createdAt = Instant.now();
 
-    public void setWallet(Wallet wallet2) {
-      // TODO Auto-generated method stub
-      throw new UnsupportedOperationException("Unimplemented method 'setWallet'");
+    // ===== GETTERS & SETTERS =====
+
+    public Wallet getWallet() {
+        return wallet;
     }
 
-    public void setAmount(BigDecimal amount2) {
-      // TODO Auto-generated method stub
-      throw new UnsupportedOperationException("Unimplemented method 'setAmount'");
+    public void setWallet(Wallet wallet) {
+        this.wallet = wallet;
     }
 
-    public void setType(String string) {
-      // TODO Auto-generated method stub
-      throw new UnsupportedOperationException("Unimplemented method 'setType'");
+    public BigDecimal getAmount() {
+        return amount;
     }
 
-    // Constructors, getters, setters
+    public void setAmount(BigDecimal amount) {
+        this.amount = amount;
+    }
+
+    public String getType() {
+        return type;
+    }
+
+    public void setType(String type) {
+        this.type = type;
+    }
 }
