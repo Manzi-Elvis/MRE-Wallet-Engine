@@ -19,7 +19,7 @@ public class Transaction {
     private BigDecimal amount;
 
     @Column(nullable = false)
-    private String type; // CREDIT or DEBIT
+    private String type; // CREDIT
 
     private Instant createdAt = Instant.now();
 
