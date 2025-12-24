@@ -23,7 +23,7 @@ public class Transaction {
 
     private Instant createdAt = Instant.now();
 
-    // ===== GETTERS & SETTERS =====
+    // 
 
     public Wallet getWallet() {
         return wallet;
